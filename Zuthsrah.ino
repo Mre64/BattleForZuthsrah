@@ -106,6 +106,24 @@ void gameOver() {
   display.write('R');
   killCountDisplayGM(belknar.killCount);
   display.display();
+
+  resetGame();
+
+}
+
+void resetGame(){
+
+  if (display.pressed(A_BUTTON) && display.pressed(B_BUTTON )){ // press A+B to start new game  
+    gameState = 1;
+    belknar.killCount = 0;
+    Enemies newEnemy;
+    enemy = newEnemy;
+  
+    Character newBelknar( Rect{32, 64 , 8, 8});
+    newBelknar.killCount = 0;
+    belknar = newBelknar;
+    display.setTextSize(1);
+  }
 }
 
 

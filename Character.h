@@ -30,7 +30,7 @@ class Character {
     uint8_t w;
     bool lifeState = 1;
     bool moveState = 1;
-    uint8_t killCount;
+    uint16_t killCount;
     float sinX = 0;
     float sinXBackwards = 3.1;
     float cosX = 0;
